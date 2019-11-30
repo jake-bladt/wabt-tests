@@ -25,4 +25,16 @@
             (i32.const 4)
         )
     )
+
+    ;; Determine if a piece has been crowned​ 
+    (func $isCrowned (param $piece i32) (result i32)
+    ​   (i32.eq​     
+            (i32.and 
+                (get_local $piece) 
+                (get_global $CROWN)
+            )​     
+            (get_global $CROWN)​   
+        )​
+    )
+
 )
